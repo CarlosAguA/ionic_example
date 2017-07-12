@@ -3,15 +3,20 @@
 
   <ion-content>
 
-  <ion-list>
-   <ion-item class="item-thumbnail-left" ng-repeat="song in vm.songs">
-     <img ng-src="{{song.image_small}}" />
-     <h4> {{song.title}} </h4>
-     <p> {{song.artist}} </p>
-   </ion-item>
-    </ion-list>
+    <td-cards class ="relative">
+      <td-card ng-repeat="song in vm.songs"
+         ng-show="$first"
+         class="absoulte"
+         on-swipe-left="vm.discardSong($index)"
+         on-swipe-right="addFavorite($index)">
+
+           <img ng-src="{{song.image_large}}" />
+           <h4> {{song.title}} </h4>
+           <p> {{song.artist}} </p>
+
+      </td-card>
+    </td-cards>
 
   </ion-content>
 
 </ion-view>
-y

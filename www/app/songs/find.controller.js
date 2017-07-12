@@ -9,6 +9,12 @@
 
      var vm = this;
 
+     vm.discardSong = discardSong;
+
+     function discardSong(index){
+       console.log("left");
+       vm.songs.splice(index, 1);
+     }
      // Songs va aquí
     vm.songs= [
       {
