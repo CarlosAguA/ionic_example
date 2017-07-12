@@ -3,17 +3,25 @@
 
  angular.module('starter').controller('findController',FindController) ;
 
- FindController.$inject = ['$scope'];
+ FindController.$inject = ['$scope','$rootScope'];
 
-   function FindController($scope){
+   function FindController($scope, $rootScope){
 
      var vm = this;
 
      vm.discardSong = discardSong;
+     vm.addFavorite = addFavorite;
 
      function discardSong(index){
        console.log("left");
        vm.songs.splice(index, 1);
+     }
+
+     function addFavorite (index){
+       console.log("right");
+       $rootScope.favorites.push(vm.songs[0]);
+       vm.songs.splice(0,1);
+    
      }
      // Songs va aquí
     vm.songs= [

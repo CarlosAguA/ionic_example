@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-angular.module('starter').run(function($ionicPlatform) {
+angular.module('starter').run(function($ionicPlatform,$rootScope) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -14,6 +14,9 @@ angular.module('starter').run(function($ionicPlatform) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+    $rootScope.favorites=[];
+    
   });
 })
 

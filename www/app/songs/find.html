@@ -8,11 +8,13 @@
          ng-show="$first"
          class="absoulte"
          on-swipe-left="vm.discardSong($index)"
-         on-swipe-right="addFavorite($index)">
+         on-swipe-right="vm.addFavorite($index)">
 
-           <img ng-src="{{song.image_large}}" />
-           <h4> {{song.title}} </h4>
-           <p> {{song.artist}} </p>
+         <div class="item item-image">
+            <img ng-src="{{song.image_large}}" />
+            <h4> {{song.title}} </h4>
+            <p> {{song.artist}} </p>
+         </div>
 
       </td-card>
     </td-cards>
