@@ -3,7 +3,7 @@
 
  angular.module('starter').controller('findController',FindController) ;
 
- FindController.$inject = ['$scope','$rootScope'];
+ FindController.$inject = ['$scope','$rootScope','$songService'];
 
    function FindController($scope, $rootScope){
 
@@ -21,7 +21,7 @@
        console.log("right");
        $rootScope.favorites.push(vm.songs[0]);
        vm.songs.splice(0,1);
-    
+
      }
      // Songs va aquí
     vm.songs= [
