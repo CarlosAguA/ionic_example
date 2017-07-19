@@ -1,11 +1,11 @@
 (function() {
     'use strict';
+//Se inyecta la directiva adicional en el controoler directamente * investigar solo dios Sabe
+ angular.module('starter').controller('findController',FindController, 'ngAudio' ) ;
 
- angular.module('starter').controller('findController',FindController) ;
+ FindController.$inject = ['$scope','$rootScope', 'songService' , '$ionicPlatform'  ];
 
- FindController.$inject = ['$scope','$rootScope', 'songService' , '$ionicPlatform'];
-
-   function FindController($scope, $rootScope, songService, $ionicPlatform){
+   function FindController( $scope, $rootScope, songService, $ionicPlatform, ngAudio){
 
      $ionicPlatform.ready(start);
      var vm = this;
