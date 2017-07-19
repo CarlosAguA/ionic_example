@@ -24,19 +24,29 @@
      function getSongs(){
          songService.getSongs()
             .then(function(result){
-         vm.songs = result;
+          vm.songs = vm.songs.concat(result);
        })
      }
 
      function discardSong(index){
-       console.log("left");
+
        vm.songs.splice(index, 1);
+         console.log(vm.songs.length)
+       if(vm.songs.length <3){
+            console.log("menor a 3")
+         getSongs();
+       }
      }
 
      function addFavorite (index){
-       console.log("right");
+
        $rootScope.favorites.push(vm.songs[0]);
        vm.songs.splice(0,1);
+      console.log(vm.songs.length)
+       if (vm.songs.length < 3){
+         console.log("menor a 3")
+         getSongs();
+       }
 
      }
 
