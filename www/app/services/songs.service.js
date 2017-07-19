@@ -8,11 +8,11 @@
  function songService($http){
 
     var service = {
-     getUsers : getUsers
+     getSongs : getSongs
      };
 
 
- function getUsers() {
+ function getSongs() {
     return $http.get('https://ionic-songhop.herokuapp.com/recommendations')
     .then(function(response){
       return response.data;

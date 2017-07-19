@@ -16,7 +16,7 @@ angular.module('starter').run(function($ionicPlatform,$rootScope) {
     }
 
     $rootScope.favorites=[];
-    
+
   });
 })
 
