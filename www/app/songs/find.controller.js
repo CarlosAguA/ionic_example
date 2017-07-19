@@ -3,10 +3,11 @@
 
  angular.module('starter').controller('findController',FindController) ;
 
- FindController.$inject = ['$scope','$rootScope', 'songService'];
+ FindController.$inject = ['$scope','$rootScope', 'songService' , '$ionicPlatform'];
 
-   function FindController($scope, $rootScope, songService ){
+   function FindController($scope, $rootScope, songService, $ionicPlatform){
 
+     $ionicPlatform.ready(start);
      var vm = this;
 
      vm.songs= [];
@@ -15,10 +16,16 @@
      vm.addFavorite = addFavorite;
      vm.getSongs = getSongs;
 
+     function start() {
+       getSongs();
+
+     }
+
      function getSongs(){
-       songService.getSongs().then(function(result){
+         songService.getSongs()
+            .then(function(result){
          vm.songs = result;
-       }
+       })
      }
 
      function discardSong(index){
