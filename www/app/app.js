@@ -8,7 +8,7 @@
 
 (function() {
     'use strict';
-angular.module('starter', ['ionic','ionic.contrib.ui.tinderCards']);
+angular.module('starter', ['ionic','ionic.contrib.ui.tinderCards','ngAudio']);
 
 
 })();
