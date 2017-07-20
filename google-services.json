@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "13807273662",
+    "firebase_url": "https://training1-f0e4e.firebaseio.com",
+    "project_id": "training1-f0e4e",
+    "storage_bucket": "training1-f0e4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13807273662:android:a49437d94111e13c",
+        "android_client_info": {
+          "package_name": "com.ionicframework.training1254257"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13807273662-62qfirona30f5vo53aafei9aqjlqjh59.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9R-LIZd3l3YdrcjWfJ5xEPPK3rseqyqo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
